@@ -16,22 +16,32 @@ public class RandUI
 
     public static void buildRandomizerUI()
     {
-        JFrame baseFrame = new JFrame();
+        JFrame baseFrame = new JFrame("Dark Souls 3 - Weapon Randomizer");
+        baseFrame.setLayout(new GridLayout(ROWS, COLS));
 
         // add image canvas
         ImageCanvas weaponView = new ImageCanvas();
+        weaponView.setSize(80, 120);
         baseFrame.add(weaponView);
 
-        // add button to randomize
+        // add bottom panel
+        JPanel bottomPanel = new JPanel();
+
+        JTextField wName = new JTextField("Dagger");
+        wName.setColumns(50);
+        wName.setHorizontalAlignment(JTextField.CENTER);
+
         Button randomizeButton = new Button("Randomize!");
         randomizeButton.addActionListener(a -> {
-            int rw = (int) (Math.random() * 2 + 1);
-
+            int rwt = (int) (Math.random() * WeaponsID.WEAPONS.length);
+            int rwi = (int) (Math.random() * WeaponsID.WEAPONS[rwt].length);
+            weaponView.setCurrentWeapon(String.valueOf(rwt), WeaponsID.WEAPONS[rwt][rwi]);
+            System.out.println(WeaponsID.WEAPONS[rwt][rwi]);
         });
-        baseFrame.add(randomizeButton);
+        bottomPanel.add(wName);
+        bottomPanel.add(randomizeButton);
 
-        baseFrame.setLayout(new GridLayout(ROWS, COLS));
-
+        baseFrame.add(bottomPanel);
         baseFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         baseFrame.setResizable(false);
         baseFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
