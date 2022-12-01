@@ -13,8 +13,6 @@ public class RandUI
     private static final int FRAME_WIDTH = 400;
     private static final int FRAME_HEIGHT = 600;
     private static final String[] WEAPON_CATEGORIES = {"All", "Daggers", "Straight Swords", "Greatswords", "Ultra Greatswords", "Curved Swords", "Curved Greatswords", "Katanas", "Thrusting Swords", "Axes", "Greataxes", "Hammers", "Great Hammers", "Fists & Claws", "Spears & Pikes", "Halberds", "Whips & Flails", "Bows", "Greatbows", "Crossbows", "Staves", "Flames, Talismans, & Chimes"};
-    private static final String PATH_TO_WEAPONS = "main\\images\\weapons\\";
-
 
     public static void buildRandomizerUI()
     {
@@ -47,16 +45,15 @@ public class RandUI
             rwi = (int) (Math.random() * WeaponsID.WEAPONS[rwt].length);
 
             weaponView.setCurrentWeapon(String.valueOf(rwt), WeaponsID.WEAPONS[rwt][rwi]);
-
-            System.out.println("Weapon at " + rwt + " and " + rwi);
-            System.out.println(WeaponsID.WEAPONS[rwt][rwi]);
+            wName.setText(WeaponsID.WEAPONS[rwt][rwi]);
         });
 
         // add to bottom panel
         JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new GridLayout(3, 1));
         bottomPanel.add(wName);
-        bottomPanel.add(randomizeButton);
         bottomPanel.add(categoryDropDown);
+        bottomPanel.add(randomizeButton);
 
         baseFrame.add(bottomPanel);
         baseFrame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
