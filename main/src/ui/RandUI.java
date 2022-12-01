@@ -18,9 +18,17 @@ public class RandUI
     {
         JFrame baseFrame = new JFrame();
 
+        // add image canvas
         ImageCanvas weaponView = new ImageCanvas();
-
         baseFrame.add(weaponView);
+
+        // add button to randomize
+        Button randomizeButton = new Button("Randomize!");
+        randomizeButton.addActionListener(a -> {
+            int rw = (int) (Math.random() * 2 + 1);
+
+        });
+        baseFrame.add(randomizeButton);
 
         baseFrame.setLayout(new GridLayout(ROWS, COLS));
 
