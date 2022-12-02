@@ -6,7 +6,7 @@ import java.io.File;
 
 public class ImageCanvas extends Canvas
 {
-    private static final String PATH_TO_WEAPONS = "main\\images\\weapons\\";
+    private static final String PATH_TO_WEAPONS = "images\\weapons\\";
     private static final String IMAGE_TYPE = ".png";
     private String current_type = "0";
     private String current_weapon = "dagger";
@@ -70,6 +70,11 @@ public class ImageCanvas extends Canvas
         current_type = type;
         current_weapon = w;
         this.paint(this.getGraphics());
+    }
+
+    public String getCurrentWeapon()
+    {
+        return current_weapon;
     }
 
 

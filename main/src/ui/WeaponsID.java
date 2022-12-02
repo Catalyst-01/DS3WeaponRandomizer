@@ -18,14 +18,14 @@ public class WeaponsID
     private static final String[] great_hammers = {"Large Club", "Gargoyle Flame Hammer", "Great Club", "Vordts Great Hammer", "Great Mace", "Mornes Great Hammer", "Great Wooden Hammer", "Smoughs Great Hammer", "Old Kings Great Hammer", "Pickaxe", "Dragon Tooth", "Spiked Mace", "Quakestone Hammer", "Ledos Great Hammer"};
     private static final String[] fists_and_claws = {"Caestus", "Demons Fist", "Dark Hand", "Claw", "Manikin Claws", "Crow Talons"};
     private static final String[] spears_and_pikes = {"Arstors Spear", "Drang Twinspears", "Gargoyle Flame Spear", "Spear", "Tailbone Spear", "Pike", "Winged Spear", "Four Pronged Plow", "Saint Bident", "Rotten Ghru Spear", "Partizan", "Yorshkas Spear", "Dragonslayer Spear", "Dragonslayer Swordspear", "Golden Ritual Spear", "Soldering Iron", "Lothric Knight Long Spear", "Greatlance", "Follower Javelin", "Lothric War Banner", "Ringed Knight Spear"};
-    private static final String[] halberds = null;
-    private static final String[] reapers = null;
-    private static final String[] whips_and_flails = null;
-    private static final String[] bows = null;
-    private static final String[] greatbows = null;
-    private static final String[] crossbows = null;
-    private static final String[] staves = null;
-    private static final String[] flames_talismans_and_chimes = null;
+    private static final String[] halberds = {"Halberd", "Lucerne", "Winged Knight Halberd", "Red Hilted Halberd", "Glaive", "Crescent Axe", "Gundyrs Halberd", "Black Knight Glaive", "Immolation Tinder", "Splitleaf Greatsword", "Crucifix of the Mad King"};
+    private static final String[] reapers = {"Great Scythe", "Pontiff Knight Great Scythe", "Great Corvian Scythe", "Friedes Great Scythe"};
+    private static final String[] whips_and_flails = {"Whip", "Notched Whip", "Witchs Locks", "Spotted Whip", "Rose of Ariandel"};
+    private static final String[] bows = {"Black Bow of Pharis", "Longbow", "Short Bow", "Dragonrider Bow", "Composite Bow", "Darkmoon Longbow", "White Birch Bow"};
+    private static final String[] greatbows = {"Onislayer Greatbow", "Dragonslayer Greatbow", "Millwood Greatbow"};
+    private static final String[] crossbows = {"Light Crossbow", "Knights Crossbow", "Arbalest", "Sniper Crossbow", "Avelyn", "Heavy Crossbow", "Repeating Crossbow"};
+    private static final String[] staves = {"Sorcerers Staff", "Heretics Staff", "Witchtree Branch", "Sages Crystal Staff", "Izalith Staff", "Court Sorcerers Staff", "Man-Grubs Staff", "Storytellers Staff", "Mendicants Staff", "Archdeacons Great Staff", "Murky Longstaff", "Preachers Right Arm"};
+    private static final String[] flames_talismans_and_chimes = {"Pyromancy Flame", "Pyromancers Parting Flame", "Talisman", "Saints Talisman", "Sunlight Talisman", "Canvas Talisman", "White Hair Talisman", "Sunless Talisman", "Clerics Sacred Chimes", "Priests Chime", "Crystal Chime", "Caithas Chime", "Saint-tree Bellvine", "Yorshkas Chime", "Sacred Chime of Filianore"};
 
     /**
      * Weapons by index:

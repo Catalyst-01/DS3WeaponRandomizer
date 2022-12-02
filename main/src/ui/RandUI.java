@@ -3,6 +3,7 @@ package ui;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class RandUI
 {
@@ -12,7 +13,7 @@ public class RandUI
     private static final int COLS = 1;
     private static final int FRAME_WIDTH = 400;
     private static final int FRAME_HEIGHT = 600;
-    private static final String[] WEAPON_CATEGORIES = {"All", "Daggers", "Straight Swords", "Greatswords", "Ultra Greatswords", "Curved Swords", "Curved Greatswords", "Katanas", "Thrusting Swords", "Axes", "Greataxes", "Hammers", "Great Hammers", "Fists & Claws", "Spears & Pikes", "Halberds", "Whips & Flails", "Bows", "Greatbows", "Crossbows", "Staves", "Flames, Talismans, & Chimes"};
+    private static final String[] WEAPON_CATEGORIES = {"All", "Daggers", "Straight Swords", "Greatswords", "Ultra Greatswords", "Curved Swords", "Curved Greatswords", "Katanas", "Thrusting Swords", "Axes", "Greataxes", "Hammers", "Great Hammers", "Fists & Claws", "Spears & Pikes", "Halberds", "Reapers", "Whips & Flails", "Bows", "Greatbows", "Crossbows", "Staves", "Flames, Talismans, & Chimes"};
 
     public static void buildRandomizerUI()
     {
@@ -38,11 +39,13 @@ public class RandUI
         randomizeButton.addActionListener(a ->
         {
             int rwt, rwi;
-            if(categoryDropDown.getSelectedIndex() == 0)
-                rwt = (int) (Math.random() * WeaponsID.WEAPONS.length);
-            else
-                rwt = categoryDropDown.getSelectedIndex() - 1;
-            rwi = (int) (Math.random() * WeaponsID.WEAPONS[rwt].length);
+            do {
+                if (categoryDropDown.getSelectedIndex() == 0)
+                    rwt = (int) (Math.random() * WeaponsID.WEAPONS.length);
+                else
+                    rwt = categoryDropDown.getSelectedIndex() - 1;
+                rwi = (int) (Math.random() * WeaponsID.WEAPONS[rwt].length);
+            } while (WeaponsID.WEAPONS[rwt][rwi].equals(weaponView.getCurrentWeapon()));
 
             weaponView.setCurrentWeapon(String.valueOf(rwt), WeaponsID.WEAPONS[rwt][rwi]);
             wName.setText(WeaponsID.WEAPONS[rwt][rwi]);
